@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
+*{
+    font-family: 'Titillium Web', sans-serif;
+}
+::-webkit-scrollbar{
+    width:5px;
+}
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(var(--pri-color),rgba(9, 127, 224, 0.719));
+    border-radius:10px;
+}
+body{
+    position:relative;
+    height:100vh;
+}
+
+:root{
+    --pri-color: #71c404;
+    --sec-color: #7cce4dcc;
+    --green-color: green;
+}
+.header{
+    background: var(--pri-color);
+}
+
+.header .logo-right .sms{
+    border: 1px solid white;
+    padding:5px 10px;
+    border-radius: 20px;
+    text-decoration:none;
+    color:white;
+    font-size: 15px;
+}
+
+.header .logo-right a{
+    font-size: 20px;
+    color:white;
+    text-decoration: none;
+    display: inline-block;
+  
+}
+.header .logo-right a i{
+    padding: 20px;
+    background: transparent;
+    transition: .5s;
+    
+}
+.header .logo-right a:hover i{
+    background: var(--sec-color);
+}
+.header .setting-ico:hover .setting-text{
+    visibility: visible;
+    opacity:1;
+}
+.header .setting-ico .setting-text{
+    position: absolute;
+    top:100%;
+    right:5%;
+    visibility: hidden;
+    opacity:0;
+    transition: .5s;
+}
+.header .setting-ico .setting-text a{
+    color:black;
+    font-size:15px;
+    white-space: nowrap;
+    position:relative;
+    padding: 12px 35px;
+    display: block;
+}
+.header .setting-ico .setting-text a::after{
+    content:'';
+    position:absolute;
+    background:lightgrey;
+    height:1px;
+    width:80%;
+    bottom:0;
+    left:10%;
+}
+.header .setting-ico .setting-text a:nth-child(3)::after{
+    display:none;
+}
+.header .setting-ico .setting-text a:hover{
+    color:var(--green-color);
+}
+.header .setting-ico .setting-text i{
+    padding:0;
+    background: transparent!important;
+}
+
+
+.details .left-profile img{
+    height:80px;
+    width:80px;
+    border-radius: 50%;
+}
+   
+.home ul a{
+    text-decoration: none;
+    overflow:hidden;
+    position:relative; 
+    margin: 5px 0;
+    padding: 12px 0;
+    color:#000;
+    border:1px solid var(--pri-color);
+    border-radius: 10px;
+    display: block;
+}
+
+.home ul a li{
+    display: inline-block;
+    text-align: left;
+    width:150px;
+}
+
+.home ul a:hover{
+    color:var(--green-color);
+    background: rgba(255, 255, 255, 0.315);
+}
+
+.right-profile .contact-us{
+    border:1px dashed var(--pri-color);
+    border-radius: 10px;
+    margin:50px 0;
+    position: relative;
+}
+
+.right-profile .contact-us a{
+    display: block;
+    margin: 10px 0;
+    text-decoration:none;
+    color:grey;
+}
+.right-profile .contact-us a:hover{
+    color:var(--pri-color);
+}
+.right-profile .footer{
+    box-shadow: 0 0 5px lightgrey;
+    text-align: center;
+    border-radius: 10px;
+    position:absolute;
+    left:50%;
+    bottom:0;
+    width:90%;
+    transform: translate(-50%,-50%);
+}
+.right-profile .footer a{
+    color:var(--pri-color);
+    text-decoration: none;
+}
+
+
+.breadcrumbs .fa-angle-right,
+.breadcrumbs span{
+    color:grey;
+}
+.breadcrumbs a:hover{
+    color:var(--green-color)!important;
+}
+.breadcrumbs a{
+    font-weight:bold;
+}
+
+.main-content{
+    border:.5px solid var(--pri-color);
+    height:75vh;
+    border-radius: 10px;
+    overflow-y:scroll;
+}
+.main-content .image strong,
+.main-content .more strong{
+    display: block;
+    margin-top: 15px;
+}
+.main-content .image a,
+.main-content .more a{
+    color:black;
+    text-decoration:none;
+    display: block;
+    padding: 20px 0;
+    position:relative;
+    transition:.5s;
+    font-weight:lighter;
+}
+
+.main-content .image a::after{
+    content:'';
+    position:absolute;
+    bottom:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    height:2px;
+    width:50px;
+    background: rgba(128, 128, 128, 0.664);
+    filter: blur(4px);
+    opacity:0;
+    visibility:hidden;
+    transition:.5s;
+}
+.main-content .image img,
+.main-content .more img{
+    transition: .5s;
+}
+.main-content .image:hover img{
+    transform:translateY(-10px);
+}
+
+.main-content .image:hover a::after,
+.main-content .more:hover a::after{
+    opacity:1;
+    visibility:visible;
+}
+.main-content .image:hover a,
+.main-content .more:hover a{
+    font-weight:bold;
+}
+
+
+.group table{
+    border-collapse: separate;
+    border-radius: 5px;
+    text-align:center;
+    display: table;
+}
+
+
+.group table thead th{
+    background:#00806f;
+    color:white;
+    border-radius:5px;
+    font-weight:lighter;
+    border:none!important;
+    display: table-cell;
+    vertical-align: middle;
+
+}
+.group table tbody tr td{
+    border-radius:5px!important;
+    display: table-cell;
+    vertical-align: middle;
+
+}
+.form-group .form-control{
+    box-shadow:none;
+}
+.form-group .form-control:focus{
+    border:1px solid var(--pri-color);
+}
+
+.contact-box p{
+    border: 1px solid lightgrey;
+    padding: 8px 15px;
+    border-radius: 5px 5px 0 0;
+    cursor:pointer;
+}
+.green-border{
+    border: 1px solid var(--pri-color)!important;
+}
+.contact-box .search-contact{
+    display: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow:none;
+    border:1px solid lightgrey;
+    position:absolute;
+    top:70%;
+}
+.group-box p{
+    border: 1px solid lightgrey;
+    padding: 8px 15px;
+    border-radius: 0 0 5px 5px;
+    cursor:pointer;
+}
+.group-box .search-group{
+    display: none;
+    border-radius: 5px 5px 0 0;
+    box-shadow:none;
+    border:1px solid lightgrey;
+    position:absolute;
+    bottom:98%;
+}
+.search-list{
+    display: none;
+    color:var(--green-color);
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+.rotate-more{
+    transform:rotate(45deg);
+}
+.opacity{
+    opacity:0;
+}
+.image.hidden-row{
+    display: none;
+}
+
+.top-up a{
+    transition:.5s;
+    padding-bottom:0!important;
+}
+
+
+.top-up .image:hover img{
+    transform: translateY(-10px);
+}
+
+.support .row label{
+    cursor: pointer;
+}
+
+.support div#technical, 
+.support div#account, 
+.support div#billing{
+    display: none;
+}
